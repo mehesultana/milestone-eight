@@ -42,3 +42,9 @@
 	padding: 20px;
 	border-radius: 20px;
 }
+.person {
+	background-color: #61dafb;
+	border: 3px solid lightpink;
+	border-radius: 20px;
+	margin: 10px;
+}
