@@ -16,8 +16,8 @@ function App() {
 			<Person name="Rubel" nayika="Moushumi"></Person>
 			<Person name="BappaRaz" nayika="Cheka"></Person>
 			<Person name="Kuber" nayika="Kopila"></Person>
-*/
-function Person(props) {
+
+      function Person(props) {
 	console.log(props);
 	const person = {
 		backgroundColor: 'skyblue',
@@ -32,6 +32,8 @@ function Person(props) {
 		</div>
 	);
 }
+*/
+
 function Friend(props) {
 	console.log(props);
 	return (
