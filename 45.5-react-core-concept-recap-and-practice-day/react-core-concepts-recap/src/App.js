@@ -11,7 +11,7 @@ function App() {
 }
 
 function MyComponent(props) {
-	// console.log(props);
+	console.log(props);
 	const myStyle = {
 		backgroundColor: 'lightblue',
 		border: '3px solid blue',
