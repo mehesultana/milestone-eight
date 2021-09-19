@@ -10,11 +10,13 @@ const Countries = () => {
 			.then((data) => setCountries(data));
 	}, []);
 	return (
-		<div className="countries-container">
+		<div>
 			<h1>Countries : {countries.length}</h1>
-			{countries.map((country) => (
-				<Country country={country}></Country>
-			))}
+			<div className="countries-container">
+				{countries.map((country) => (
+					<Country key={country.capital} country={country}></Country>
+				))}
+			</div>
 		</div>
 	);
 };
