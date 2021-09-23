@@ -9,7 +9,7 @@ const Shop = () => {
 	const [cart, setCart] = useState([]);
 
 	useEffect(() => {
-		console.log('product API called');
+		// console.log('product API called');
 		fetch('./products.JSON')
 			.then((res) => res.json())
 			.then((data) => {
@@ -19,16 +19,22 @@ const Shop = () => {
 	}, []);
 
 	useEffect(() => {
-		console.log('local storage callled');
+		// console.log('local storage callled');
 		if (products.length) {
 			const savedCart = getStoredCart();
 			// console.log(savedCart);
 			const storedCart = [];
 			for (const key in savedCart) {
 				// console.log(key);
+
 				const addedProduct = products.find((product) => product.key === key);
 				// console.log(addedProduct);
-				storedCart.push(addedProduct);
+				if (addedProduct) {
+					const quantity = savedCart[key];
+					addedProduct.quantity = quantity;
+					// console.log(addedProduct);
+					storedCart.push(addedProduct);
+				}
 			}
 			setCart(storedCart);
 		}
