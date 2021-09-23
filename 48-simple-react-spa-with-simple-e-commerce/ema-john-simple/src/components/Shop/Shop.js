@@ -10,11 +10,15 @@ const Shop = () => {
 			.then((data) => setProducts(data));
 	}, []);
 
+	const handleAddToCart = (product) => {
+		console.log(product.name);
+	};
+
 	return (
 		<div className="shop-container">
 			<div className="product-container">
 				{products.map((product) => (
-					<Product key={product.key} product={product}></Product>
+					<Product key={product.key} product={product} handleAddToCart={handleAddToCart}></Product>
 				))}
 			</div>
 			<div className="cart-container">
