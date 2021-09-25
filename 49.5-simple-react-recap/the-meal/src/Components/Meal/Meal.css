@@ -1,10 +1,16 @@
 .meal {
-	background-color: rgb(226, 232, 238);
+	background-color: rgb(231, 231, 231);
 	border: 2px solid rgb(0, 0, 0);
 	margin: 10px;
 	padding: 5px;
 	color: rgb(0, 0, 0);
 	border-radius: 10px;
+}
+.meal:hover {
+	border-radius: 20px;
+	box-shadow: 5px 5px 10px gray;
+	background-color: #f8ffd3;
+	border: 5px solid #6d5e3d;
 }
 .meal img {
 	width: 200px;

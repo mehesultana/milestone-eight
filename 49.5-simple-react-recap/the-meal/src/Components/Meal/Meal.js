@@ -1,4 +1,5 @@
 import React from 'react';
+import './Meal.css';
 
 const Meal = (props) => {
 	const { strMealThumb, strMeal, strCategory } = props.meal;

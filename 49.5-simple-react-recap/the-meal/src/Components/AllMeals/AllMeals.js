@@ -20,7 +20,7 @@ const AllMeals = () => {
 
 	return (
 		<div>
-			<h1>Meal : {meals.length}</h1>
+			<h1>Total Meals : {meals.length}</h1>
 			{/* <ul>{meals.map((meal) => meal.strMeal)}</ul> */}
 			<div className="meals-container">
 				{meals.map((meal) => (
