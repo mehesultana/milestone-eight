@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Meal from '../Meal/Meal';
+import './AllMeals.css';
 
 const AllMeals = () => {
 	const [meals, setMeals] = useState([]);
@@ -8,14 +10,23 @@ const AllMeals = () => {
 		fetch(url)
 			.then((res) => res.json())
 			.then((data) => {
-				console.log(data.meals);
+				// console.log(data.meals);
 				setMeals(data.meals);
-			});
+				// const strMeals = meals.map((meal) => meal.strMeal);
+				// console.log(strMeals);
+			})
+			.catch((error) => console.log(error));
 	}, []);
 
 	return (
 		<div>
 			<h1>Meal : {meals.length}</h1>
+			{/* <ul>{meals.map((meal) => meal.strMeal)}</ul> */}
+			<div className="meals-container">
+				{meals.map((meal) => (
+					<Meal key={meal.idMeal} meal={meal}></Meal>
+				))}
+			</div>
 		</div>
 	);
 };

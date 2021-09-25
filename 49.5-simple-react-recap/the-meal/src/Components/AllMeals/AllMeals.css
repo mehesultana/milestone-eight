@@ -1,0 +1,8 @@
+.meals-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+}
+h1 {
+	color: rgb(34, 88, 158);
+}
